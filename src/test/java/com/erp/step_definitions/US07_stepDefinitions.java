@@ -22,8 +22,8 @@ public class US07_stepDefinitions {
         Assert.assertTrue(crm.crmManagerButton.isDisplayed());
     }
     @Then("verify the Event manager has access to {int} modules")
-    public void verify_the_event_manager_has_access_to_modules(Integer int1) {
-        Assert.assertEquals(int1,Integer.valueOf(crm.allModules.size()));
+    public void verify_the_event_manager_has_access_to_modules(Integer expectedNumberOfModules) {
+        Assert.assertEquals(expectedNumberOfModules,Integer.valueOf(crm.allModules.size()));
     }
 
 }

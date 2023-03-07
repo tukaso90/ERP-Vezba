@@ -23,8 +23,8 @@ public class US04_stepDefinitions {
     }
 
     @Then("verify Inventory manager has access to {int} modules")
-    public void verify_inventory_manager_has_access_to_modules(Integer int1) {
-        Assert.assertEquals(int1,Integer.valueOf(inventoryManager.mainModules.size()));
+    public void verify_inventory_manager_has_access_to_modules(Integer expectedNumberOfModules) {
+        Assert.assertEquals(expectedNumberOfModules,Integer.valueOf(inventoryManager.mainModules.size()));
     }
 
 

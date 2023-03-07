@@ -16,8 +16,8 @@ public class US02_stepDefinitions {
     pos_Manager_Page.repairsButton.click();
     }
     @Then("user should be able to see {int} columns for the repairs orders as a POS manager")
-    public void user_should_be_able_to_see_columns_for_the_repairs_orders_as_a_pos_manager(Integer int1) {
-        Assert.assertEquals(int1, Integer.valueOf(pos_Manager_Page.repairsOrders.size()));
+    public void user_should_be_able_to_see_columns_for_the_repairs_orders_as_a_pos_manager(Integer expectedOrdersNum) {
+        Assert.assertEquals(expectedOrdersNum, Integer.valueOf(pos_Manager_Page.repairsOrders.size()));
     }
 
 
@@ -28,8 +28,8 @@ public class US02_stepDefinitions {
         sales_Manager_Page.repairsButton.click();
     }
     @Then("user should be able to see {int} columns for the repairs orders as a sales manager")
-    public void user_should_be_able_to_see_columns_for_the_repairs_orders_as_a_sales_manager(Integer int1) {
-        Assert.assertEquals(int1,Integer.valueOf(sales_Manager_Page.repairsOrders.size()));
+    public void user_should_be_able_to_see_columns_for_the_repairs_orders_as_a_sales_manager(Integer expectedOrdersNum) {
+        Assert.assertEquals(expectedOrdersNum,Integer.valueOf(sales_Manager_Page.repairsOrders.size()));
     }
 
 

@@ -30,9 +30,9 @@ public class US01_stepDefinitions {
         pos_Manager_Page.salesButton.click();
     }
     @Then("the user should be able to see {int} quotations on the page")
-    public void the_user_should_be_able_to_see_quotations_on_the_page(Integer int1) {
+    public void the_user_should_be_able_to_see_quotations_on_the_page(Integer expectedNumberOfQuotations) {
 
-        Assert.assertEquals(int1, Integer.valueOf(pos_Manager_Page.quotations.size()));
+        Assert.assertEquals(expectedNumberOfQuotations, Integer.valueOf(pos_Manager_Page.quotations.size()));
     }
 
 

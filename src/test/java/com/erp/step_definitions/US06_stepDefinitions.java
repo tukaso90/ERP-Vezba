@@ -42,8 +42,8 @@ public class US06_stepDefinitions {
     }
 
     @Then("user should verify there are {int} main document topics")
-    public void user_should_verify_there_are_main_document_topics(Integer int1) {
-        Assert.assertEquals(int1, Integer.valueOf(odo.mainDocuments.size()));
+    public void user_should_verify_there_are_main_document_topics(Integer expectedNumberOfDocuments) {
+        Assert.assertEquals(expectedNumberOfDocuments, Integer.valueOf(odo.mainDocuments.size()));
     }
 
 }

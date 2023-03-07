@@ -13,10 +13,9 @@ public class US03_stepDefinitions {
     POSManagerPage pos_Manager_Page = new POSManagerPage();
 
     @Then("user logged in as a POS manager should be abele to see {int} modules")
-    public void user_logged_in_as_a_pos_manager_should_be_abele_to_see_modules(Integer int1) {
+    public void user_logged_in_as_a_pos_manager_should_be_abele_to_see_modules(Integer expectedNumberOfModules) {
 
-    Assert.assertEquals(int1,Integer.valueOf(pos_Manager_Page.mainModules.size()));
-    //it shows 23 elements because there is more button as well
+    Assert.assertEquals(expectedNumberOfModules,Integer.valueOf(pos_Manager_Page.mainModules.size()));
 
     }
 
