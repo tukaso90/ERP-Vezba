@@ -57,6 +57,8 @@ public class Hooks {
     //@BeforeStep
     public void setupStep(){
         System.out.println("-----> @BeforeSTEP : Running before each step!");
+        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
     }
 
     //@AfterStep
