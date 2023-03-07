@@ -38,6 +38,10 @@ public class POSManagerPage {
     @FindBy(xpath ="//a[@data-menu-xmlid='point_of_sale.menu_point_root']")
     public WebElement pointOfSaleButton;
 
+    @FindBy(xpath = "//a[.='Documentation']")
+    public WebElement documentationButton;
+
+
 
 
 
