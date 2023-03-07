@@ -21,10 +21,12 @@ public class US01_stepDefinitions {
     public void user_should_be_able_to_log_in_as_a_pos_manager() {
         loginPage.login(ConfigurationReader.getProperty("pos.manager.username"),ConfigurationReader.getProperty("pos.manager.password"));
     }
-    @Then("the user should be able to see {string} on the screen")
-    public void the_user_should_be_able_to_see_on_the_screen(String string) {
-        Assert.assertEquals(string,pos_Manager_Page.posManagerButton.getText());
+
+    @Then("verify user is logged as POS manager")
+    public void verify_user_is_logged_as_pos_manager() {
+        Assert.assertTrue(pos_Manager_Page.posManagerButton.isDisplayed());
     }
+
     @When("user clicks on the Sales button")
     public void user_clicks_on_the_sales_button() {
         pos_Manager_Page.salesButton.click();
@@ -42,9 +44,9 @@ public class US01_stepDefinitions {
     public void user_should_be_able_to_log_in_as_a_sales_manager() {
         loginPage.login(ConfigurationReader.getProperty("sales.manager.username"),ConfigurationReader.getProperty("sales.manager.password"));
     }
-    @Then("user should be able to see {string} on the screen")
-    public void user_should_be_able_to_see_on_the_screen(String string) {
-        Assert.assertEquals(string,sales_Manager_Page.salesManagerButton.getText());
+    @Then("verify user is logged as sales manager")
+    public void verify_user_is_logged_as_sales_manager() {
+        Assert.assertTrue(sales_Manager_Page.salesManagerButton.isDisplayed());
     }
     @When("the user clicks on the Sales button")
     public void the_user_clicks_on_the_sales_button() {

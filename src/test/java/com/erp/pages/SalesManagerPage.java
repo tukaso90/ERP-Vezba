@@ -25,6 +25,9 @@ public class SalesManagerPage {
     public WebElement repairsButton;
 
     @FindBy(className = "o_column_sortable")
-    public List<WebElement>repairsOrders;
+    public List<WebElement> repairsOrders;
+
+    @FindBy(xpath = "//li[@style='display: block;']")
+    public List<WebElement> mainModules;
 
 }
