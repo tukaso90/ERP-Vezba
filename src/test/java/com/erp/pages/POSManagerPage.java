@@ -37,6 +37,9 @@ public class POSManagerPage {
     @FindBy(xpath = "//a[.='Documentation']")
     public WebElement documentationButton;
 
+    @FindBy(xpath = "//span[@class='oe_topbar_name']")
+    public WebElement confirmationButton;
+
 
 
 
