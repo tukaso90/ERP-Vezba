@@ -24,9 +24,6 @@ public class SalesManagerPage {
     @FindBy(xpath = "//a[@data-menu-xmlid='mrp_repair.menu_repair_order']")
     public WebElement repairsButton;
 
-    @FindBy(className = "o_column_sortable")
-    public List<WebElement> repairsOrders;
-
     @FindBy(xpath = "//li[@style='display: block;']")
     public List<WebElement> mainModules;
 
